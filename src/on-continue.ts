@@ -1,5 +1,5 @@
 import { iGame, iPos, iHeroShot, iEnemyShip, iHeroShip, config } from './constants';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { stars$Fac } from './stars';
 import { heroShip$Fac } from './hero-ship';
 import { heroShots$Fac } from './hero-shots';
@@ -65,7 +65,8 @@ const testCollision = (game: iGame): iGame => {
 }
 
 export default (game: iGame): Observable<iGame> => {
-  const heroShip$ = heroShip$Fac(game.actors.heroShip);
+  const heroShip$ = <BehaviorSubject<iHeroShip>>(new BehaviorSubject(game.actors.heroShip));
+  heroShip$Fac(game.actors.heroShip).subscribe(heroShip$);
   const enemyShips$ = <Subject<iEnemyShip[]>>(new Subject());
   enemyShips$Fac(game.actors.enemyShips).subscribe(enemyShips$);
   return Observable.combineLatest(
