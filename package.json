@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "tsd install",
     "test": "karma start",
     "start": "webpack-dev-server --progress --profile --colors --watch --display-error-details --display-cached --content-base src/"
   },
@@ -31,9 +32,11 @@
     "karma": "^1.1.2",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1",
+    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.14.1"
   }
 }

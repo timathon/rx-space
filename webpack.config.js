@@ -1,4 +1,4 @@
-var path = require('path');
+// var path = require('path');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 

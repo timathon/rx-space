@@ -3,3 +3,4 @@ import renderer from './renderer';
 
 
 game$.subscribe(renderer);
+
