@@ -1,11 +1,11 @@
-// var path = require('path');
+var path = require('path');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.ts",
   output: {
-      path: './dist', // but the doc says "The output directory as absolute path (required)."
+      path: path.join(__dirname, 'dist'),
       filename: "bundle.js"
   },
   resolve: {

@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "tsd install",
     "test": "karma start",
-    "start": "webpack-dev-server --progress --profile --colors --watch --display-error-details --display-cached --content-base src/"
+    "start": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "karma-jasmine": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
+    "lodash": "^4.15.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
